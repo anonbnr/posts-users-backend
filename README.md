@@ -11,6 +11,15 @@ A **Node.js + Express + TypeScript** RESTful API for a social media that provide
 
 ---
 
+## 🛠️ Tech Stack
+- **Backend:** Node.js, Express  
+- **Language:** TypeScript  
+- **Data Handling:** In-memory data storage  
+- **Environment:** dotenv  
+- **Build Tools:** ts-node, nodemon  
+
+---
+
 ## 🗂️ Project Structure
 ```
 src/
@@ -70,7 +79,6 @@ npm run dev
 - **Production mode:**
 
 ```bash
-npm run build
 npm start
 ```
 
@@ -95,15 +103,6 @@ npm start
 - `DELETE /api/posts/:id` — Delete post by ID  
 - `POST /api/posts/:id/like` — Like a post  
 - `POST /api/posts/:id/dislike` — Dislike a post  
-
----
-
-## 🛠️ Tech Stack
-- **Backend:** Node.js, Express  
-- **Language:** TypeScript  
-- **Data Handling:** In-memory data storage  
-- **Environment:** dotenv  
-- **Build Tools:** ts-node, nodemon  
 
 ---
 

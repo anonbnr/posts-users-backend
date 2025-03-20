@@ -1,6 +1,6 @@
+import { v4 as uuidv4 } from "uuid";
 import { User } from "../../models/user.model";
 import { DataSource } from "../base.datasource";
-import { v4 as uuidv4 } from "uuid";
 
 export class InMemoryUserDataSource implements DataSource<User> {
     private users: User[] = [];
@@ -29,7 +29,7 @@ export class InMemoryUserDataSource implements DataSource<User> {
     update(id: string, updatedData: Partial<Omit<User, "id" | "createdAt">>): User | null {
         const index = this.users.findIndex((user) => user.id === id);
         if (index === -1) return null;
-    
+
         this.users[index] = { ...this.users[index], ...updatedData };
         return this.users[index];
     }

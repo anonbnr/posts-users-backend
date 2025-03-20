@@ -2,14 +2,14 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import express, { Request, Response } from "express";
+import { createPostController } from "./controllers/post.controller";
+import { createUserController } from "./controllers/user.controller";
 import { InMemoryPostDataSource } from "./datasources/in-memory/in-memory-post.datasource";
 import { InMemoryUserDataSource } from "./datasources/in-memory/in-memory-user.datasource";
 import { PostRepository } from "./repositories/post.repository";
 import { UserRepository } from "./repositories/user.repository";
 import { PostService } from "./services/post.service";
 import { UserService } from "./services/user.service";
-import { createUserController } from "./controllers/user.controller";
-import { createPostController } from "./controllers/post.controller";
 
 // Load environment variables
 dotenv.config();
